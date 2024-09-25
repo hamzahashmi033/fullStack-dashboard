@@ -18,6 +18,8 @@ public class Project {
     private ObjectId id;
     private String title;
     private String category;
+    private Integer stage;
+    private String Status;
     private List<String> tags = new ArrayList<>();
     private String remarks;
 }

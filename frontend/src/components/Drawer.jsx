@@ -24,7 +24,7 @@ const DrawerComp = ({ isOpen, onClose }) => {
                 <DrawerContent>
                     <DrawerCloseButton zIndex={100}/>
                     <DrawerBody bg={"#F4F6FA"}>
-                        <Flex direction={"column"} className='w-[100%] ' >
+                        <Flex direction={"column"} className='w-[100%]' >
                             <Sidebar />
                         </Flex>
                     </DrawerBody>
