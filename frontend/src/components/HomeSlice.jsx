@@ -15,7 +15,8 @@ import { useEffect, useRef, useState } from "react";
 import AlertComp from "./Alert";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProjects } from "@/store/ProjectSlice";
-
+import { PlusSquareIcon } from "@chakra-ui/icons";
+import * as Unicons from "@iconscout/react-unicons";
 export default function HomeSlice() {
   const dispatch = useDispatch();
   const btnRef = useRef();
