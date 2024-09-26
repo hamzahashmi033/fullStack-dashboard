@@ -1,8 +1,12 @@
 import { inter, roboto_mono } from "@/app/fonts/fonts";
-import { Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Flex, Heading, Spacer, Spinner } from "@chakra-ui/react";
 import ProjectBadges from "./ProjectBadges";
 import { projects } from "@/utils/data";
-import MainTabs from "./MainTabs";
+import { Suspense, lazy } from "react";
+
+// Lazy load the MainTabs component
+const MainTabs = lazy(() => import("./MainTabs"));
+
 const countProjectStatus = (projects) => {
   const statusCount = {
     Completed: 0,
@@ -19,6 +23,7 @@ const countProjectStatus = (projects) => {
 
   return statusCount; // Return the final counts
 };
+
 const ContentComp = ({ fetchedPrjects, onOpen, onClose, btnRef }) => {
   const projectStatusCount = countProjectStatus(fetchedPrjects);
 
@@ -54,15 +59,28 @@ const ContentComp = ({ fetchedPrjects, onOpen, onClose, btnRef }) => {
           count={projectStatusCount.Cancelled}
         />
       </Flex>
-      <Flex className="mt-8">
-        <MainTabs
-          fetchedPrjects={fetchedPrjects}
-          onOpen={onOpen}
-          onClose={onClose}
-          btnRef={btnRef}
-        />
+      <Flex className="mt-8 justify-center items-center">
+        <Suspense
+          fallback={
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />
+          }
+        >
+          <MainTabs
+            fetchedPrjects={fetchedPrjects}
+            onOpen={onOpen}
+            onClose={onClose}
+            btnRef={btnRef}
+          />
+        </Suspense>
       </Flex>
     </Flex>
   );
 };
+
 export default ContentComp;
