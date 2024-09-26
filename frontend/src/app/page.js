@@ -1,4 +1,4 @@
-import HomeSlice from "@/components/HomeSlice";
+import HomeSlice from "@/components/HomeSlice.jsx";
 import Image from "next/image";
 
 export default function Home() {

@@ -17,7 +17,7 @@ const Sidebar = () => {
       </div>
       <div className="p-2 mt-2 w-full  flex justify-center xxxs:space-x-4 lg:space-x-2 xl:space-x-4 items-center">
         <Image
-          src={require("/public/assets/avatar.svg")}
+          src={require("/public/assets/Avatar.svg")}
           width={60}
           height={60}
           className="cover"
