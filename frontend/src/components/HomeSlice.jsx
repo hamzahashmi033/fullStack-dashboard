@@ -98,6 +98,7 @@ export default function HomeSlice() {
               bg={"#5876B7"}
               color={"white"}
               variant="solid"
+              
               onClick={onOpen2}
               ref={btnRef}
             >
