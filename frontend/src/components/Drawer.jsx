@@ -1,10 +1,5 @@
 'use client'
 import { useDisclosure, Drawer, DrawerBody, DrawerOverlay, DrawerContent, DrawerHeader, DrawerCloseButton, Button, Flex, MenuButton, Menu } from '@chakra-ui/react'
-import Image from 'next/image'
-import * as Unicons from "@iconscout/react-unicons"
-import TabsComp from './Tabs'
-import BasicMenu from './Menu'
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import Sidebar from './Sidebar'
 const DrawerComp = ({ isOpen, onClose }) => {
 
@@ -24,7 +19,7 @@ const DrawerComp = ({ isOpen, onClose }) => {
                 <DrawerContent>
                     <DrawerCloseButton zIndex={100}/>
                     <DrawerBody bg={"#F4F6FA"}>
-                        <Flex direction={"column"} className='w-[100%]' >
+                        <Flex direction={"column"}  >
                             <Sidebar />
                         </Flex>
                     </DrawerBody>

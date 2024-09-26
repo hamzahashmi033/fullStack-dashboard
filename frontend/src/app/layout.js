@@ -1,10 +1,10 @@
-
 import localFont from "next/font/local";
 import "./globals.css";
 import ProviderChakra from "@/components/ChakraProvider";
 import { fira_sans, inter, roboto_mono } from "./fonts/fonts";
 
 import ReduxProvider from "@/store/ReduxProvider";
+import AlertComp from "@/components/Alert";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -32,7 +32,6 @@ export default function RootLayout({ children }) {
             {children}
           </ProviderChakra>
         </ReduxProvider>
-
       </body>
     </html>
   );
