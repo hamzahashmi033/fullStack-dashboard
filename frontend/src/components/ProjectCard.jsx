@@ -48,8 +48,8 @@ export default function ProjectCard({
           </div>
         </div>
         <div className="mt-6  w-[100%] flex mb-6 flex-wrap justify-start">
-          {tags.map((elem) => {
-            return <TagBadge title={elem} />;
+          {tags.map((elem, index) => {
+            return <TagBadge key={`${elem}-${index}`} title={elem} />;
           })}
         </div>
         <div className="absolute bottom-2 left-0 w-full">
