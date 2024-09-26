@@ -59,6 +59,7 @@ export default function MainTabs({ fetchedPrjects, onOpen, onClose, btnRef }) {
               completedProjects.map((elem, index) => {
                 return (
                   <ProjectCard
+                    key={`${elem.title}-${index}`}
                     title={elem.title}
                     category={elem.category}
                     tags={elem.tags}
@@ -83,6 +84,7 @@ export default function MainTabs({ fetchedPrjects, onOpen, onClose, btnRef }) {
               ongoingProjects.map((elem, index) => {
                 return (
                   <ProjectCard
+                    key={`${elem.title}-${index}`}
                     title={elem.title}
                     category={elem.category}
                     tags={elem.tags}
@@ -107,6 +109,7 @@ export default function MainTabs({ fetchedPrjects, onOpen, onClose, btnRef }) {
               draftProjects.map((elem, index) => {
                 return (
                   <ProjectCard
+                    key={`${elem.title}-${index}`}
                     title={elem.title}
                     category={elem.category}
                     tags={elem.tags}
@@ -131,6 +134,7 @@ export default function MainTabs({ fetchedPrjects, onOpen, onClose, btnRef }) {
               cancelledProjects.map((elem, index) => {
                 return (
                   <ProjectCard
+                    key={`${elem.title}-${index}`}
                     title={elem.title}
                     category={elem.category}
                     tags={elem.tags}
